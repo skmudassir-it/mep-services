@@ -75,7 +75,7 @@ export default async function ServicePage({ params }: PageProps) {
           <FadeUp delay={0.18}>
             <div className="relative overflow-hidden rounded-3xl border border-white/70 shadow-[0_24px_80px_rgba(30,58,95,0.18)]">
               <Image
-                src="/images/project1.jpg"
+                src={service.image}
                 alt={`${service.title} — delivered by MEP Services`}
                 width={1200}
                 height={675}

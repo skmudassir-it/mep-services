@@ -236,6 +236,44 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ================= GALLERY ================= */}
+      <section className="section-pad relative">
+        <div className="container-site">
+          <SectionHeading
+            eyebrow="Gallery"
+            title="Our work, in pictures"
+            subtitle="Real projects, real systems — HVAC plants, coordinated BIM models and precision ductwork."
+          />
+          <Stagger className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
+            {[
+              { src: "/images/hero.jpg", alt: "Commercial HVAC facility" },
+              { src: "/images/service-hvac.jpg", alt: "VRF rooftop unit" },
+              { src: "/images/project3.jpg", alt: "Duct manufacturing workshop" },
+              { src: "/images/service-bim.jpg", alt: "BIM clash detection screen" },
+              { src: "/images/gallery-1.jpg", alt: "Hotel lobby with exposed HVAC diffusers" },
+              { src: "/images/gallery-2.jpg", alt: "Rooftop chillers and solar panels at sunset" },
+              { src: "/images/service-mep.jpg", alt: "MEP Revit model review" },
+              { src: "/images/about.jpg", alt: "Engineering team collaboration" },
+            ].map((g) => (
+              <StaggerItem key={g.src}>
+                <div className="glass-card group relative aspect-[4/3] overflow-hidden">
+                  <Image
+                    src={g.src}
+                    alt={g.alt}
+                    width={800}
+                    height={600}
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 flex items-end bg-gradient-to-t from-primary/60 via-transparent to-transparent p-3 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                    <p className="text-xs font-semibold text-white">{g.alt}</p>
+                  </div>
+                </div>
+              </StaggerItem>
+            ))}
+          </Stagger>
+        </div>
+      </section>
+
       {/* ================= FAQ ================= */}
       <section className="section-pad relative">
         <div className="blob left-[-10%] top-[20%] h-[24rem] w-[24rem] bg-primary/10" />

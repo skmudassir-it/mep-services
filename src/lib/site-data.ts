@@ -6,6 +6,7 @@ export type Service = {
   description: string;
   features: string[];
   deliverables: string[];
+  image: string;
 };
 
 export const SERVICES: Service[] = [
@@ -24,6 +25,7 @@ export const SERVICES: Service[] = [
       "Energy-efficient retrofits",
     ],
     deliverables: ["Load calculations", "Equipment schedules", "Installation drawings", "Commissioning reports"],
+    image: "/images/service-hvac.jpg",
   },
   {
     slug: "mep-engineering",
@@ -40,6 +42,7 @@ export const SERVICES: Service[] = [
       "Revit MEP coordination",
     ],
     deliverables: ["MEP design packages", "Revit MEP models", "Coordination drawings", "Clash reports"],
+    image: "/images/service-mep.jpg",
   },
   {
     slug: "duct-manufacturing",
@@ -56,6 +59,7 @@ export const SERVICES: Service[] = [
       "Insulated & acoustic lining",
     ],
     deliverables: ["Shop drawings", "Cut schedules", "Spool drawings", "Delivery logistics"],
+    image: "/images/service-duct.jpg",
   },
   {
     slug: "bim-revit-coordination",
@@ -72,6 +76,7 @@ export const SERVICES: Service[] = [
       "As-built model delivery",
     ],
     deliverables: ["Coordinated models", "Clash reports", "Shop drawings", "As-built documentation"],
+    image: "/images/service-bim.jpg",
   },
   {
     slug: "hvac-maintenance",
@@ -88,6 +93,7 @@ export const SERVICES: Service[] = [
       "Energy performance audits",
     ],
     deliverables: ["Maintenance schedules", "Service reports", "Performance audits", "Compliance certificates"],
+    image: "/images/gallery-2.jpg",
   },
   {
     slug: "energy-audits",
@@ -104,6 +110,7 @@ export const SERVICES: Service[] = [
       "ROI modelling",
     ],
     deliverables: ["Audit reports", "Retrofit proposals", "ROI analysis", "Implementation plans"],
+    image: "/images/gallery-1.jpg",
   },
 ];
 
