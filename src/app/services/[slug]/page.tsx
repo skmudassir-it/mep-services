@@ -76,7 +76,7 @@ export default async function ServicePage({ params }: PageProps) {
             <div className="relative overflow-hidden rounded-3xl border border-white/70 shadow-[0_24px_80px_rgba(30,58,95,0.18)]">
               <Image
                 src={service.image}
-                alt={`${service.title} — delivered by MEP Services`}
+                alt={`${service.title} — delivered by AMS BIM Services`}
                 width={1200}
                 height={675}
                 className="h-[22rem] w-full object-cover"

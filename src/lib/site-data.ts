@@ -331,11 +331,11 @@ export const FAQS = [
 ];
 
 export const COMPANY = {
-  name: "MEP Services",
-  tagline: "HVAC · MEP · Duct Manufacturing",
+  name: "AMS BIM Services",
+  tagline: "Architecture · MEP · BIM",
   description:
-    "Design, engineering, manufacturing and service — HVAC and MEP solutions delivered through precision, coordination and one accountable team.",
-  email: "hello@mep-services.amsitservices.com",
+    "AMS BIM Services delivers architectural design, MEP engineering and BIM coordination in Revit — perfect solutions for owners, architects and builders.",
+  email: "hello@amsbimservices.com",
   phone: "+1 (555) 234-5678",
   address: "Unit 7, Industrial Park East, Houston, TX",
   hours: "Mon–Fri, 8:00–18:00 · 24/7 emergency line",

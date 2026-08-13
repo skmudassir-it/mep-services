@@ -8,7 +8,7 @@ import { StarRating } from "@/components/star-rating";
 export const metadata: Metadata = {
   title: "Testimonials",
   description:
-    "What HVAC clients, architects and manufacturing partners say about working with MEP Services.",
+    "What clients, architects and builders say about working with AMS BIM Services.",
 };
 
 export default function TestimonialsPage() {
@@ -75,7 +75,7 @@ export default function TestimonialsPage() {
             <div className="glass rounded-3xl p-10 text-center">
               <h2 className="text-2xl font-bold text-primary">Ready to join our clients?</h2>
               <p className="mx-auto mt-3 max-w-xl text-muted-foreground">
-                Experience the MEP Services difference — coordinated design, in-house manufacturing and one accountable team.
+                Experience the AMS BIM Services difference — coordinated design, in-house manufacturing and one accountable team.
               </p>
               <div className="mt-6 flex flex-wrap justify-center gap-4">
                 <Link href="/contact" className="btn-gradient">

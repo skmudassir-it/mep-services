@@ -7,7 +7,7 @@ import { FadeUp, SectionHeading } from "@/components/motion";
 export const metadata: Metadata = {
   title: "Projects",
   description:
-    "Selected HVAC, MEP and duct manufacturing projects delivered by MEP Services — commercial, healthcare, manufacturing and institutional.",
+    "Selected HVAC, MEP and duct manufacturing projects delivered by AMS BIM Services — commercial, healthcare, manufacturing and institutional.",
 };
 
 export default function ProjectsPage() {

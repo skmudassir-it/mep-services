@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Building2, Mail, Phone, MapPin, Clock, Globe, Share2, Rss, Send } from "lucide-react";
+import Image from "next/image";
+import { Mail, Phone, MapPin, Clock, Globe, Share2, Rss, Send } from "lucide-react";
 import { COMPANY, SERVICES } from "@/lib/site-data";
 
 export function Footer() {
@@ -8,11 +9,14 @@ export function Footer() {
       <div className="glass mx-auto max-w-7xl rounded-3xl p-8 sm:p-12">
         <div className="grid gap-10 md:grid-cols-4">
           <div>
-            <Link href="/" className="flex items-center gap-2">
-              <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-[#2a5a92] text-white">
-                <Building2 className="h-5 w-5" />
+            <Link href="/" className="flex items-center gap-2.5">
+              <span className="relative h-10 w-10 overflow-hidden rounded-xl shadow-md shadow-primary/20">
+                <Image src="/images/logo.png" alt="AMS BIM Services logo" fill className="object-cover" sizes="40px" />
               </span>
-              <span className="text-lg font-bold tracking-tight text-primary">{COMPANY.name}</span>
+              <span className="flex flex-col leading-tight">
+                <span className="text-base font-extrabold tracking-tight text-primary">{COMPANY.name}</span>
+                <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-accent">{COMPANY.tagline}</span>
+              </span>
             </Link>
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{COMPANY.description}</p>
             <form className="mt-5" aria-label="Newsletter signup">

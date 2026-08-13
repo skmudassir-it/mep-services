@@ -135,7 +135,7 @@ export default function ContactPage() {
             <StaggerItem>
               <div className="overflow-hidden rounded-3xl border border-white/60 shadow-[0_8px_32px_rgba(30,58,95,0.08)]">
                 <iframe
-                  title="MEP Services office location"
+                  title="AMS BIM Services office location"
                   src="https://www.openstreetmap.org/export/embed.html?bbox=-95.42%2C29.68%2C-95.30%2C29.78&layer=mapnik&marker=29.73%2C-95.36"
                   className="h-64 w-full border-0"
                   loading="lazy"

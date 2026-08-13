@@ -2,9 +2,10 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
-import { Menu, X, Building2 } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const NAV_LINKS = [
@@ -43,12 +44,15 @@ export function Navbar() {
         )}
         aria-label="Main navigation"
       >
-        <Link href="/" className="flex items-center gap-2">
-          <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-[#2a5a92] text-white shadow-md shadow-primary/25">
-            <Building2 className="h-5 w-5" />
+        <Link href="/" className="flex items-center gap-2.5">
+          <span className="relative h-10 w-10 overflow-hidden rounded-xl shadow-md shadow-primary/20">
+            <Image src="/images/logo.png" alt="AMS BIM Services logo" fill className="object-cover" sizes="40px" />
           </span>
-          <span className="text-lg font-bold tracking-tight text-primary">
-            minilamisam
+          <span className="flex flex-col leading-tight">
+            <span className="text-base font-extrabold tracking-tight text-primary">AMS BIM Services</span>
+            <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-accent">
+              Architecture · MEP · BIM
+            </span>
           </span>
         </Link>
 

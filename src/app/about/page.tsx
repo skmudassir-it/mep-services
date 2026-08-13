@@ -7,7 +7,7 @@ import { FadeUp, Stagger, StaggerItem, SectionHeading } from "@/components/motio
 export const metadata: Metadata = {
   title: "About",
   description:
-    "MEP Services — 15+ years of HVAC design, MEP engineering and duct manufacturing. Meet the team behind 500+ coordinated projects.",
+    "AMS BIM Services — 15+ years of architecture, MEP engineering and BIM. Meet the team behind 500+ coordinated projects.",
 };
 
 const WHY = [
@@ -50,7 +50,7 @@ export default function AboutPage() {
             </FadeUp>
             <FadeUp delay={0.16}>
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
-                MEP Services started as a two-person HVAC design consultancy. Today we're a
+                AMS BIM Services started as a two-person architecture and BIM consultancy. Today we're a
                 40-person team that designs, engineers, manufactures and services complete
                 mechanical, electrical and plumbing systems.
               </p>
@@ -66,7 +66,7 @@ export default function AboutPage() {
             <div className="relative overflow-hidden rounded-3xl border border-white/70 shadow-[0_24px_80px_rgba(30,58,95,0.18)]">
               <Image
                 src="/images/about.jpg"
-                alt="MEP Services engineering team reviewing HVAC drawings"
+                alt="AMS BIM Services engineering team reviewing Revit models"
                 width={1200}
                 height={675}
                 className="h-[24rem] w-full object-cover"
@@ -109,7 +109,7 @@ export default function AboutPage() {
               <StaggerItem key={m.name}>
                 <div className="glass-card h-full overflow-hidden text-center">
                   <div className="relative h-56 w-full">
-                    <Image src={m.image} alt={`${m.name} — ${m.title} at MEP Services`} fill className="object-cover" sizes="(max-width: 768px) 100vw, 25vw" />
+                    <Image src={m.image} alt={`${m.name} — ${m.title} at AMS BIM Services`} fill className="object-cover" sizes="(max-width: 768px) 100vw, 25vw" />
                   </div>
                   <div className="p-6">
                     <h3 className="text-lg font-bold text-primary">{m.name}</h3>

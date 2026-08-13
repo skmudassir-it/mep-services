@@ -1,45 +1,33 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
-import {
-  ArrowRight, Snowflake, Wrench, Factory, Boxes, ShieldCheck, Award, Users, Settings, Gauge,
-} from "lucide-react";
+import { ArrowRight, ShieldCheck } from "lucide-react";
 import { SERVICES, STATS, TESTIMONIALS, FAQS, COMPANY } from "@/lib/site-data";
 import { FadeUp, Stagger, StaggerItem, SectionHeading } from "@/components/motion";
 import { EmblaCarousel } from "@/components/embla-carousel";
-import { StarRating } from "@/components/star-rating";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 export const metadata: Metadata = {
-  title: "HVAC, MEP Engineering & Duct Manufacturing",
+  title: "Architecture, MEP & BIM Services in Revit",
   description:
-    "MEP Services delivers HVAC design and installation, MEP engineering, BIM coordination, duct manufacturing and energy audits — precision solutions from one team.",
-};
-
-const ICONS: Record<string, typeof Snowflake> = {
-  Snowflake,
-  Wrench,
-  Factory,
-  Boxes,
-  Settings,
-  Gauge,
+    "AMS BIM Services delivers architectural design, MEP engineering and BIM coordination in Revit — perfect solutions for owners, architects and builders.",
 };
 
 const FEATURES = [
   {
-    icon: Factory,
-    title: "Design. Build. Manufacture.",
-    text: "HVAC design, MEP engineering and in-house duct manufacturing under one roof — one team accountable for the whole job.",
+    title: "Architecture + MEP under one roof",
+    text: "Design and engineering that talk to each other from day one — no handoff gaps, no coordination surprises.",
+    image: "/images/card-coordination.jpg",
   },
   {
-    icon: Boxes,
-    title: "Revit-coordinated delivery",
-    text: "Every MEP package is coordinated in Revit with architecture and structure, so clashes die in the model, not on site.",
+    title: "Revit-first, always",
+    text: "Every project lives in an intelligent Revit model: clash-free, data-rich, and ready for construction.",
+    image: "/images/service-bim.jpg",
   },
   {
-    icon: ShieldCheck,
-    title: "98% client satisfaction",
-    text: "500+ projects, 15+ years, and a maintenance network that answers the phone at 2am.",
+    title: "Precision manufacturing",
+    text: "CNC-precision ductwork and fabrication delivered from the same coordinated model we design in.",
+    image: "/images/card-manufacturing.jpg",
   },
 ];
 
@@ -47,8 +35,9 @@ export default function HomePage() {
   const localBusinessJsonLd = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    name: COMPANY.name,
-    description: COMPANY.description,
+    name: "AMS BIM Services",
+    description:
+      "Architectural design, MEP engineering and BIM coordination in Revit — perfect solutions for owners, architects and builders.",
     url: "https://mep-services.amsitservices.com",
     image: "https://mep-services.amsitservices.com/images/hero.jpg",
     email: COMPANY.email,
@@ -56,7 +45,7 @@ export default function HomePage() {
     address: { "@type": "PostalAddress", streetAddress: COMPANY.address },
     openingHours: "Mo-Fr 08:00-18:00",
     priceRange: "$$",
-    knowsAbout: ["HVAC Design", "MEP Engineering", "Duct Manufacturing", "BIM Coordination", "Energy Audits"],
+    knowsAbout: ["Architecture", "MEP Engineering", "BIM", "Revit Modeling", "Construction Coordination"],
   };
 
   return (
@@ -77,7 +66,7 @@ export default function HomePage() {
             <FadeUp>
               <p className="inline-flex items-center gap-2 rounded-full border border-primary/15 bg-white/50 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-primary backdrop-blur-md">
                 <ShieldCheck className="h-3.5 w-3.5 text-accent" />
-                HVAC · MEP · Duct Manufacturing
+                Architecture · MEP · BIM
               </p>
             </FadeUp>
             <FadeUp delay={0.08}>
@@ -90,8 +79,8 @@ export default function HomePage() {
             </FadeUp>
             <FadeUp delay={0.16}>
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
-                From load calculations to CNC-cut ductwork, we deliver HVAC and MEP projects
-                that are designed, coordinated and built to perform — by one accountable team.
+                From concept sketches to coordinated Revit models, we deliver architecture, MEP
+                and BIM as one seamless workflow.
               </p>
             </FadeUp>
             <FadeUp delay={0.24}>
@@ -120,7 +109,7 @@ export default function HomePage() {
             <div className="relative overflow-hidden rounded-3xl border border-white/70 shadow-[0_24px_80px_rgba(30,58,95,0.18)]">
               <Image
                 src="/images/hero.jpg"
-                alt="Commercial HVAC and MEP engineering facility by MEP Services"
+                alt="Architecture and MEP engineering facility by AMS BIM Services"
                 width={1200}
                 height={675}
                 priority
@@ -128,8 +117,8 @@ export default function HomePage() {
               />
               <div className="absolute inset-x-4 bottom-4 rounded-2xl border border-white/60 bg-white/70 p-4 backdrop-blur-xl">
                 <p className="flex items-center gap-2 text-sm font-semibold text-primary">
-                  <Factory className="h-4 w-4 text-accent" />
-                  In-house duct manufacturing · Revit-coordinated delivery
+                  <ShieldCheck className="h-4 w-4 text-accent" />
+                  Fully coordinated Revit delivery
                 </p>
               </div>
             </div>
@@ -141,19 +130,28 @@ export default function HomePage() {
       <section className="section-pad relative">
         <div className="container-site">
           <SectionHeading
-            eyebrow="Why MEP Services"
+            eyebrow="Why AMS BIM Services"
             title="One team. Every trade. Zero finger-pointing."
-            subtitle="Design, engineering, manufacturing and service working from one coordinated model."
+            subtitle="Architecture, MEP and BIM working from one coordinated Revit model."
           />
           <Stagger className="mt-12 grid gap-6 md:grid-cols-3">
             {FEATURES.map((f) => (
               <StaggerItem key={f.title}>
-                <div className="glass-card h-full p-7">
-                  <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-primary to-[#2a5a92] text-white shadow-md shadow-primary/25">
-                    <f.icon className="h-6 w-6" />
-                  </span>
-                  <h3 className="mt-5 text-lg font-semibold text-primary">{f.title}</h3>
-                  <p className="mt-2.5 text-sm leading-relaxed text-muted-foreground">{f.text}</p>
+                <div className="glass-card group h-full overflow-hidden">
+                  <div className="relative h-44 overflow-hidden">
+                    <Image
+                      src={f.image}
+                      alt={f.title}
+                      width={800}
+                      height={450}
+                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary/40 via-transparent to-transparent" />
+                  </div>
+                  <div className="p-7">
+                    <h3 className="text-lg font-semibold text-primary">{f.title}</h3>
+                    <p className="mt-2.5 text-sm leading-relaxed text-muted-foreground">{f.text}</p>
+                  </div>
                 </div>
               </StaggerItem>
             ))}
@@ -169,7 +167,7 @@ export default function HomePage() {
             <SectionHeading
               align="left"
               eyebrow="What we do"
-              title="HVAC, MEP & manufacturing — coordinated"
+              title="Architecture, MEP & BIM — coordinated"
             />
             <FadeUp>
               <Link href="/services" className="btn-glass">
@@ -178,23 +176,31 @@ export default function HomePage() {
             </FadeUp>
           </div>
           <Stagger className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {SERVICES.map((s) => {
-              const Icon = ICONS[s.icon] ?? Snowflake;
-              return (
-                <StaggerItem key={s.slug}>
-                  <Link href={`/services/${s.slug}`} className="glass-card block h-full p-7">
-                    <span className="flex h-12 w-12 items-center justify-center rounded-2xl border border-primary/15 bg-white/60 text-primary">
-                      <Icon className="h-6 w-6" />
+            {SERVICES.map((s) => (
+              <StaggerItem key={s.slug}>
+                <Link href={`/services/${s.slug}`} className="glass-card group block h-full overflow-hidden">
+                  <div className="relative h-40 overflow-hidden">
+                    <Image
+                      src={s.image}
+                      alt={s.title}
+                      width={800}
+                      height={450}
+                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary/50 via-transparent to-transparent" />
+                    <span className="absolute bottom-3 left-4 text-sm font-bold text-white drop-shadow">
+                      {s.title}
                     </span>
-                    <h3 className="mt-5 text-lg font-semibold text-primary">{s.title}</h3>
-                    <p className="mt-2.5 text-sm leading-relaxed text-muted-foreground">{s.tagline}</p>
+                  </div>
+                  <div className="p-6">
+                    <p className="text-sm leading-relaxed text-muted-foreground">{s.tagline}</p>
                     <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-accent">
                       Learn more <ArrowRight className="h-4 w-4" />
                     </span>
-                  </Link>
-                </StaggerItem>
-              );
-            })}
+                  </div>
+                </Link>
+              </StaggerItem>
+            ))}
           </Stagger>
         </div>
       </section>

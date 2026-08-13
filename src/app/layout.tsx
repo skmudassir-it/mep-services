@@ -19,18 +19,18 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://mep-services.amsitservices.com"),
   title: {
-    default: "MEP Services — HVAC, MEP Engineering & Duct Manufacturing",
-    template: "%s | MEP Services",
+    default: "AMS BIM Services — Architecture, MEP Engineering & BIM",
+    template: "%s | AMS BIM Services",
   },
   description:
-    "HVAC design and installation, MEP engineering, BIM & Revit coordination, duct manufacturing and energy audits — precision solutions from one accountable team.",
+    "AMS BIM Services delivers architectural design, MEP engineering and BIM coordination in Revit — perfect solutions for owners, architects and builders.",
   openGraph: {
-    title: "MEP Services — HVAC, MEP Engineering & Duct Manufacturing",
+    title: "AMS BIM Services — Architecture, MEP Engineering & BIM",
     description:
-      "Design, engineering, manufacturing and service. HVAC and MEP solutions delivered with precision and coordination.",
+      "Architecture, MEP engineering and BIM coordination delivered through coordinated Revit models.",
     type: "website",
     url: "https://mep-services.amsitservices.com",
-    images: [{ url: "/images/hero.jpg", width: 1200, height: 675, alt: "MEP Services HVAC engineering" }],
+    images: [{ url: "/images/hero.jpg", width: 1200, height: 675, alt: "AMS BIM Services engineering" }],
   },
 };
 
